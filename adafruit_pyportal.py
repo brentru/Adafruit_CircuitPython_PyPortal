@@ -53,7 +53,8 @@ import pulseio
 import neopixel
 
 from adafruit_esp32spi import adafruit_esp32spi, adafruit_esp32spi_wifimanager
-import adafruit_esp32spi.adafruit_esp32spi_requests as requests
+import adafruit_esp32spi.adafruit_esp32spi_socket as socket
+import adafruit_requests as requests
 
 import adafruit_touchscreen
 from adafruit_cursorcontrol.cursorcontrol import Cursor
@@ -271,7 +272,7 @@ class PyPortal:
                 self._esp.reset()
         else:
             raise RuntimeError("Was not able to find ESP32")
-        requests.set_interface(self._esp)
+        requests.set_socket(socket, self._esp)
 
         if url and not self._uselocal:
             self._connect_esp()
