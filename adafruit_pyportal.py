@@ -54,11 +54,12 @@ import neopixel
 
 from adafruit_esp32spi import adafruit_esp32spi, adafruit_esp32spi_wifimanager
 import adafruit_esp32spi.adafruit_esp32spi_socket as socket
-import adafruit_requests as requests
 
 import adafruit_touchscreen
 from adafruit_cursorcontrol.cursorcontrol import Cursor
 from adafruit_cursorcontrol.cursorcontrol_cursormanager import CursorManager
+
+import adafruit_requests as requests
 
 try:
     from adafruit_display_text.text_area import TextArea  # pylint: disable=unused-import
